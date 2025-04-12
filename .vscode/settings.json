@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Forgotten Realms.sln"
+    "dotnet.defaultSolution": "Forgotten-Realms.sln"
 }
