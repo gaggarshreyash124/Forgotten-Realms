@@ -59,7 +59,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
+                    "name": "right",
                     "id": "21956cec-2171-445c-944b-a1c06972f081",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -70,7 +70,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "right",
+                    "name": "left",
                     "id": "f069b804-942e-4e11-8e4e-28cfc80d03ed",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -79,6 +79,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "90d6a6a8-6ef3-4bb7-a134-c31a5b1b29f2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
