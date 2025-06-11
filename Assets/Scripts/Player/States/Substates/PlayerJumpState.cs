@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpState : MonoBehaviour
+public class PlayerJumpState : AbilityState
 {
-    // Start is called before the first frame update
-    void Start()
+    int amountofjumpsleft;
+    public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-        
+        amountofjumpsleft = playerData.amountofjumps;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Enter()
     {
+        base.Enter();
+
+        player.SetVelocityY(playerData.jumpForce);
+        isAbilityDone = true;
+        amountofjumpsleft--;
         
     }
-}
+    public bool CanJump()
+    {
+        if (amountofjumpsleft > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void ResetJumps() => amountofjumpsleft = playerData.amountofjumps;
+
+    public void DecreseJumps() => amountofjumpsleft--;
+
+} 

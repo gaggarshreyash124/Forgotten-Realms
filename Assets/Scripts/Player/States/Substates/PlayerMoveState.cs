@@ -9,6 +9,7 @@ public class PlayerMoveState : GroundedState
     {
         
     }
+
     public override void Dochecks()
     {
         base.Dochecks();
@@ -29,6 +30,7 @@ public class PlayerMoveState : GroundedState
         base.LogicUpdate();
 
         player.SetVelocityX(playerData.moveSpeed * XInput);
+        player.CheckFlip(XInput);
 
         if (XInput == 0)
         {
