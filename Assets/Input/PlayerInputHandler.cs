@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-
     public Vector2 RawMovementInput { get; private set; }
 
     public int NormalizedInputX { get; private set; }
@@ -28,6 +27,8 @@ public class PlayerInputHandler : MonoBehaviour
         RawMovementInput = context.ReadValue<Vector2>();
         NormalizedInputX = (int)(RawMovementInput.x * Vector2.right).normalized.x;
         NormalizedInputY = (int)(RawMovementInput.y * Vector2.up).normalized.y;
+
+        Debug.Log("HHOOOOO");
 
     }
 

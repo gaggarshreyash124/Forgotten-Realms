@@ -60,6 +60,11 @@ public class Player : MonoBehaviour
         FacingDirection = 1;
 
         StateMachine.Initialize(idleState);
+        if (InputHandler != null)
+        {
+
+            Debug.Log("yaaaa");
+        }
     }
 
     private void Update()
