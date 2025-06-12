@@ -19,7 +19,7 @@ public class GroundedState : PlayerState
     {
         base.Dochecks();
 
-        player.CheckGround();
+        IsGrounded = player.CheckGround();
     }
 
     public override void Enter()

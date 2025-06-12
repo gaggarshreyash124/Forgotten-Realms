@@ -37,13 +37,14 @@ public class PlayerInairState : PlayerState
     {
         base.LogicUpdate();
 
+        Debug.Log(isGrounded);
+
         CheckCoyoteTime();
 
         Xinput = player.InputHandler.NormalizedInputX;
         JumpInput = player.InputHandler.JumpInput;
         JumpInputStop = player.InputHandler.JumpInputStop;
 
-        CheckJumpMultiplier();
 
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
@@ -60,22 +61,6 @@ public class PlayerInairState : PlayerState
 
             player.Anim.SetFloat("Yvelocity", player.CurrentVelocity.y);
             player.Anim.SetFloat("Xvelocity", Mathf.Abs(player.CurrentVelocity.x));
-        }
-    }
-
-    void CheckJumpMultiplier()
-    {
-        if (isJumping)
-        {
-            if (JumpInputStop)
-            {
-                player.SetVelocityY(player.CurrentVelocity.y * playerData.VariableJump);
-                isJumping = false;
-            }
-            else if (player.CurrentVelocity.y <= 0f)
-            {
-                isJumping = false;
-            }
         }
     }
     public override void PhysicsUpdate()

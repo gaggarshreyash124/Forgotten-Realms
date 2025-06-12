@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
     {
         CurrentVelocity = rb.velocity;
         StateMachine.CurrentState.LogicUpdate();
+       
     }
 
     private void FixedUpdate()
