@@ -6,7 +6,9 @@ public class GroundedState : PlayerState
 {
 
     protected int XInput;
+
     private bool JumpInput;
+    public bool IsGrounded;
 
     public GroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -16,6 +18,8 @@ public class GroundedState : PlayerState
     public override void Dochecks()
     {
         base.Dochecks();
+
+        player.CheckGround();
     }
 
     public override void Enter()
@@ -23,6 +27,7 @@ public class GroundedState : PlayerState
         base.Enter();
 
         player.jumpState.ResetJumps();
+        
     }
 
     public override void Exit()
@@ -40,6 +45,11 @@ public class GroundedState : PlayerState
         {
             player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.jumpState);
+        }
+        else if (!IsGrounded)
+        {
+            player.inairState.startcyotetime();
+            stateMachine.ChangeState(player.inairState);
         }
     }
 

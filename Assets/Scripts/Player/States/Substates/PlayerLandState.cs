@@ -21,6 +21,7 @@ public class PlayerLandState : GroundedState
         else if (isAnimationFinished)
         {
             stateMachine.ChangeState(player.idleState);
+            
         }
 
         
