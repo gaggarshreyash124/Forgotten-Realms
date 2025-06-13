@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     #endregion
+    public ParticleSystem dust;
 
     #region Other Variables
 
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform GroundCheck;
 
     #endregion
+
 
     private void Awake()
     {
@@ -90,9 +92,14 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
     
-    public void CheckFlip(int Xinput)
+    public void CheckFlip(int Xinput,bool MoveState)
     {
-        if (Xinput != 0 && Xinput != FacingDirection)
+        if (Xinput != 0 && Xinput != FacingDirection && MoveState)
+        {
+            Flip();
+            Createdust();
+        }
+        else if (Xinput != 0 && Xinput != FacingDirection)
         {
             Flip();
         }
@@ -106,6 +113,7 @@ public class Player : MonoBehaviour
     {
         FacingDirection *= -1;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        dust.transform.localScale = new Vector3(dust.transform.localScale.x * -1, dust.transform.localScale.y, dust.transform.localScale.z);
     }
 
     public void SetVelocityY(float Velocity)
@@ -114,4 +122,10 @@ public class Player : MonoBehaviour
         rb.velocity = workspace;
         CurrentVelocity = workspace;
     }
+    public void Createdust()
+    {
+        dust.Play();
+    }
+
 }
+  

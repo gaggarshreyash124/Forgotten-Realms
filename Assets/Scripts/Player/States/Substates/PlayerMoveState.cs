@@ -5,6 +5,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerMoveState : GroundedState
 {
+
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
         
@@ -30,7 +31,8 @@ public class PlayerMoveState : GroundedState
         base.LogicUpdate();
 
         player.SetVelocityX(playerData.moveSpeed * XInput);
-        player.CheckFlip(XInput);
+        player.CheckFlip(XInput,true);
+        
 
         if (XInput == 0)
         {
@@ -41,5 +43,10 @@ public class PlayerMoveState : GroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public void Createdust()
+    {
+        player.dust.Play();
     }
 }

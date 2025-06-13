@@ -49,6 +49,7 @@ public class PlayerInairState : PlayerState
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.landState);
+            player.Createdust();
         }
         else if (JumpInput && player.jumpState.CanJump())
         {
@@ -56,7 +57,7 @@ public class PlayerInairState : PlayerState
         }
         else
         {
-            player.CheckFlip(Xinput);
+            player.CheckFlip(Xinput,false);
             player.SetVelocityX(playerData.moveSpeed * Xinput);
 
             player.Anim.SetFloat("Yvelocity", player.CurrentVelocity.y);
