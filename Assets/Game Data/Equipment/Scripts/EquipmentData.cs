@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-[CreateAssetMenu(fileName = "EquipmentData",menuName ="Data/Equipment Data")]
+[CreateAssetMenu(fileName = "EquipmentData", menuName = "Data/Equipment Data")]
 public class EquipmentData : ScriptableObject
 {
     [TitleGroup("Information")]
@@ -34,4 +34,25 @@ public class EquipmentData : ScriptableObject
         "Epic",
         "Legendary"
     };
+
+    [ValueDropdown("Type")]
+    public List<string> Type = new List<string>()
+    {
+        "Helmet",
+        "Armour",
+        "Trousers",
+        "Boots"
+    };
+
+    [ValueDropdown("Stats")]
+    public List<string> Stats = new List<string>()
+    {
+        "Defense",
+        "Helath Increase",
+        "",
+        "MoveSpeed"
+    };
+
+
+
 }
