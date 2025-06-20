@@ -21,3 +21,13 @@ MonoBehaviour:
   - Rare
   - Epic
   - Legendary
+  Type:
+  - Helmet
+  - Helmet
+  - Trousers
+  - Boots
+  Stats:
+  - Defense
+  - Helath Increase
+  - 
+  - MoveSpeed
