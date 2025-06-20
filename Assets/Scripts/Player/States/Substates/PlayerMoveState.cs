@@ -32,7 +32,7 @@ public class PlayerMoveState : GroundedState
 
         player.SetVelocityX(playerData.moveSpeed * XInput);
         player.CheckFlip(XInput,true);
-        
+            
 
         if (XInput == 0)
         {
@@ -45,8 +45,5 @@ public class PlayerMoveState : GroundedState
         base.PhysicsUpdate();
     }
 
-    public void Createdust()
-    {
-        player.dust.Play();
-    }
+    
 }
