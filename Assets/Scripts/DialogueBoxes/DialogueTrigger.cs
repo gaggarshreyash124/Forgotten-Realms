@@ -28,4 +28,17 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     public Dialogue dialogue;
+
+    public void TriggerDialogue()
+    {
+        DialogueManager.Instance.StartDialogue(dialogue);
+    }
+
+    private void OggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            TriggerDialogue();
+        }
+    }
 }
