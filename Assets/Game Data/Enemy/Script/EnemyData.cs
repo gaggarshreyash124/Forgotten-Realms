@@ -9,7 +9,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemy Data/Base Data")]
 public class EnemyData : ScriptableObject
 {
-    
+
     [TitleGroup("Information")]
     [HorizontalGroup("Information/Split/Left", Width = 0.3f)]
     [PreviewField(height: 100, Alignment = ObjectFieldAlignment.Left)]
@@ -39,7 +39,7 @@ public class EnemyData : ScriptableObject
     [BoxGroup("Stats")]
     [HideLabel]
     [Header("Speed")]
-    public float speed;
+    public float speed = 3f;
 
     [BoxGroup("Stats")]
     [HideLabel]
@@ -52,5 +52,14 @@ public class EnemyData : ScriptableObject
     public float attackdamage;
     #endregion
 
+    [TitleGroup("Checks")]
+    public float wallCheckDistance;
+    public float ledgeCheckDistance;
+
+    public float MinIdleTime;
+    public float MaxIdleTime;
+
+    [ReadOnly]
+    public LayerMask Ground;
    
 }   

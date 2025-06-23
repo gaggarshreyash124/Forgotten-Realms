@@ -19,3 +19,10 @@ MonoBehaviour:
   speed: 0.86
   attackrange: 0.06
   attackdamage: 0.04
+  wallCheckDistance: 0
+  ledgeCheckDistance: 0
+  MinIdleTime: 0
+  MaxIdleTime: 0
+  Ground:
+    serializedVersion: 2
+    m_Bits: 64

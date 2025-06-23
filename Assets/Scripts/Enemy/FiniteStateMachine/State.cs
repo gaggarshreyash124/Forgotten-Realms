@@ -7,16 +7,25 @@ public class State
 
     protected FiniteStateMachine StateMachine;
     protected Entity entity;
+    protected EnemyData enemyData;
 
     protected float StartTime;
 
     protected string Animboolname;
 
-    public State(Entity entity, FiniteStateMachine stateMachine, string Animboolname)
+    public State(Entity entity, FiniteStateMachine stateMachine, string animboolname)
+    {
+        this.entity = entity;
+        StateMachine = stateMachine;
+        Animboolname = animboolname;
+    }
+
+    public State(Entity entity, FiniteStateMachine stateMachine, string Animboolname, EnemyData enemyData)
     {
         this.entity = entity;
         this.StateMachine = stateMachine;
         this.Animboolname = Animboolname;
+        this.enemyData = enemyData;
     }
 
     public virtual void Enter()
