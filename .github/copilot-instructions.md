@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Player, Water, UI, Ground, Enemy, Boss
 - Active game object:
-  - Name: Person
+  - Name: WaterReflection
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Water
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

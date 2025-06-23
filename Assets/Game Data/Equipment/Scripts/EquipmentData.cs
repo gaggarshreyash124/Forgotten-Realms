@@ -25,8 +25,17 @@ public class EquipmentData : ScriptableObject
     [Multiline]
     public string description;
 
-    [ValueDropdown("Rarity")]
-    public List<string> Rarity = new List<string>()
+    [ValueDropdown("rarity")]
+    public string Rarity;
+
+    [ValueDropdown("type")]
+    public string Type;
+
+    [ValueDropdown("stats")]
+
+
+
+    public static List<string> rarity = new List<string>()
     {
         "Common",
         "Uncommon",
@@ -35,8 +44,7 @@ public class EquipmentData : ScriptableObject
         "Legendary"
     };
 
-    [ValueDropdown("Type")]
-    public List<string> Type = new List<string>()
+    public static List<string> type = new List<string>()
     {
         "Helmet",
         "Armour",
@@ -44,15 +52,5 @@ public class EquipmentData : ScriptableObject
         "Boots"
     };
 
-    [ValueDropdown("Stats")]
-    public List<string> Stats = new List<string>()
-    {
-        "Defense",
-        "Helath Increase",
-        "",
-        "MoveSpeed"
-    };
-
-
-
+    public List<float> stats = new List<float>();
 }

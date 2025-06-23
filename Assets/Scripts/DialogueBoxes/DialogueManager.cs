@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    public Image characterIcon;
+    public UnityEngine.UI.Image characterIcon;
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
 

@@ -15,19 +15,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   name: 
   description: 
-  Rarity:
-  - Common
-  - Uncommon
-  - Rare
-  - Epic
-  - Legendary
-  Type:
-  - Helmet
-  - Helmet
-  - Trousers
-  - Boots
-  Stats:
-  - Defense
-  - Helath Increase
-  - 
-  - MoveSpeed
+  Rarity: Rare
+  Type: Helmet
+  stats:
+  - 0
