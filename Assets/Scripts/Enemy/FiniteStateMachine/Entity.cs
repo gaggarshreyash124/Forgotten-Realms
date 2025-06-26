@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     public FiniteStateMachine stateMachine { get; private set; }
     public EnemyData enemyData { get; set; }
 
-    public int facingDirection { get; private set; }
+    public int facingDirection  { get; private set; }
 
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
@@ -27,7 +27,6 @@ public class Entity : MonoBehaviour
         anim = Alive.GetComponent<Animator>();
 
         stateMachine = new FiniteStateMachine();
-
     }
     public virtual void Update()
     {
@@ -40,7 +39,9 @@ public class Entity : MonoBehaviour
 
     public virtual void SetVelocity(float Velocity)
     {
-        VelocityWorkspace.Set(facingDirection * Velocity, rb.velocity.y);
+        Debug.Log(Velocity);
+        VelocityWorkspace = new Vector2(facingDirection * Velocity, rb.velocity.y);
+        Debug.Log(VelocityWorkspace);
         rb.velocity = VelocityWorkspace;
     }
 
