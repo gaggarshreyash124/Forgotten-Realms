@@ -53,4 +53,6 @@ public class EquipmentData : ScriptableObject
     };
 
     public List<float> stats = new List<float>();
+    
+    
 }

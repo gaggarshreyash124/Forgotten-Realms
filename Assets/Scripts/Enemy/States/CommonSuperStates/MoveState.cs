@@ -8,12 +8,12 @@ public class MoveState : State
     protected bool isWallthere;
     protected bool isLedgethere;
 
-    public MoveState(Entity entity, FiniteStateMachine stateMachine, string Animboolname, EnemyData enemyData) : base(entity, stateMachine, Animboolname, enemyData)
+    public Enemy1 Enemy1;
+
+    public MoveState(Entity entity, FiniteStateMachine stateMachine, string animboolname, EnemyData enemyData) : base(entity, stateMachine, animboolname, enemyData)
     {
         
     }
-
-    public Enemy1 Enemy1 { get; }
 
     public override void Enter()
     {

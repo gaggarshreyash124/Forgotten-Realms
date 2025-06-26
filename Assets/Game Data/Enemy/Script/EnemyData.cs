@@ -53,11 +53,11 @@ public class EnemyData : ScriptableObject
     #endregion
 
     [TitleGroup("Checks")]
-    public float wallCheckDistance;
-    public float ledgeCheckDistance;
+    public float wallCheckDistance = .2f;
+    public float ledgeCheckDistance = .4f;
 
-    public float MinIdleTime;
-    public float MaxIdleTime;
+    public float MinIdleTime = 1;
+    public float MaxIdleTime = 2;
 
     [ReadOnly]
     public LayerMask Ground;

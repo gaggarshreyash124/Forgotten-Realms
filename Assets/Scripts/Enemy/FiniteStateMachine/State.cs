@@ -13,18 +13,11 @@ public class State
 
     protected string Animboolname;
 
-    public State(Entity entity, FiniteStateMachine stateMachine, string animboolname)
+    public State(Entity entity, FiniteStateMachine stateMachine, string animboolname, EnemyData enemyData)
     {
         this.entity = entity;
         StateMachine = stateMachine;
         Animboolname = animboolname;
-    }
-
-    public State(Entity entity, FiniteStateMachine stateMachine, string Animboolname, EnemyData enemyData)
-    {
-        this.entity = entity;
-        this.StateMachine = stateMachine;
-        this.Animboolname = Animboolname;
         this.enemyData = enemyData;
     }
 

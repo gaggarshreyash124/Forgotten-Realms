@@ -10,7 +10,7 @@ public class IdleState : State
     protected bool isidleover;
     protected float IdleTime;
 
-    public IdleState(Entity entity, FiniteStateMachine stateMachine, string Animboolname, EnemyData enemyData) : base(entity, stateMachine, Animboolname, enemyData)
+    public IdleState(Entity entity, FiniteStateMachine stateMachine, string Animboolname,EnemyData enemyData) : base(entity, stateMachine, Animboolname, enemyData)
     {
 
     }

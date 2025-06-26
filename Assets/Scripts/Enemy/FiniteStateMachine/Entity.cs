@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Entity : MonoBehaviour
 {
     public FiniteStateMachine stateMachine { get; private set; }
-    public EnemyData enemyData { get; private set; }
+    public EnemyData enemyData { get; set; }
 
     public int facingDirection { get; private set; }
 
