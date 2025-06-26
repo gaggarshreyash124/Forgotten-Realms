@@ -2,7 +2,6 @@
 - Project name: Forgotten-Realms
 - Unity version: Unity 2022.3.44f1
 - Active scene:
-  - Name: Testing
   - Tags:
     - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Boss, Enemy
   - Layers:
