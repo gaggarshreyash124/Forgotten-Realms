@@ -14,7 +14,7 @@ public class E1_IdleState : IdleState
     public override void Enter()
     {
         base.Enter();
-
+        Debug.Log(enemyData.speed);
     }
 
     public override void Exit()

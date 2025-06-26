@@ -16,13 +16,13 @@ MonoBehaviour:
   name: 
   description: 
   Maxhealth: 8.13
-  speed: 0.86
+  speed: 5
   attackrange: 0.06
   attackdamage: 0.04
-  wallCheckDistance: 0
-  ledgeCheckDistance: 0
-  MinIdleTime: 0
-  MaxIdleTime: 0
+  wallCheckDistance: 0.2
+  ledgeCheckDistance: 0.4
+  MinIdleTime: 1
+  MaxIdleTime: 2
   Ground:
     serializedVersion: 2
     m_Bits: 64

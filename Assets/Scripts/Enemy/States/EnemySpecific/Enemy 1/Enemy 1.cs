@@ -16,7 +16,11 @@ public class Enemy1 : Entity
 
         enemyData = SpecificData;
 
-        MoveState = new E1_MoveState(this,stateMachine,"move",enemyData,this);
-        idleState = new E1_IdleState(this, stateMachine, "idle", enemyData,this);
+        MoveState = new E1_MoveState(this, stateMachine, "move", enemyData, this);
+        idleState = new E1_IdleState(this, stateMachine, "idle", enemyData, this);
+
+        stateMachine.Initilize(MoveState);
+
+        
     }
 }

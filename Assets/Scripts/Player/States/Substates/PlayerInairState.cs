@@ -37,7 +37,6 @@ public class PlayerInairState : PlayerState
     {
         base.LogicUpdate();
 
-        Debug.Log(isGrounded);
 
         CheckCoyoteTime();
 
