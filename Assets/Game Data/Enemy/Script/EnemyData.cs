@@ -59,7 +59,13 @@ public class EnemyData : ScriptableObject
     public float MinIdleTime = 1;
     public float MaxIdleTime = 2;
 
+    [Header("Player Detection")]
+    public float minAgroDistance = 3f;
+    public float maxAgroDistance = 4f;
+
+
+
     [ReadOnly]
     public LayerMask Ground;
-   
+    public LayerMask Player;
 }   

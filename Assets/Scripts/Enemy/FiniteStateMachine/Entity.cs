@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     public FiniteStateMachine stateMachine { get; private set; }
     public EnemyData enemyData { get; set; }
 
-    public int facingDirection  { get; private set; }
+    public int facingDirection = 1;
 
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
@@ -19,6 +19,7 @@ public class Entity : MonoBehaviour
 
     [SerializeField] Transform wallCheck;
     [SerializeField] Transform ledgeCheck;
+    [SerializeField] Transform PlayerCheck;
 
     public virtual void Start()
     {
@@ -57,6 +58,18 @@ public class Entity : MonoBehaviour
     public virtual void Flip()
     {
         facingDirection *= -1;
-        Alive.transform.localScale = new Vector3(Alive.transform.localScale.x * -1, Alive.transform.localScale.y, Alive.transform.localScale.z);
+        Alive.transform.Rotate(0f, 180f, 0f);
+
     }
+
+    public virtual bool CheckPlayerInMinAgroRange()
+    {
+        return Physics2D.Raycast(PlayerCheck.transform.position, Alive.transform.right, enemyData.minAgroDistance, enemyData.Player);
+    }
+
+    public virtual bool CheckPlayerInMaxAgroRange()
+    {
+        return Physics2D.Raycast(PlayerCheck.transform.position, Alive.transform.right, enemyData.maxAgroDistance, enemyData.Player);
+    }
+
 }

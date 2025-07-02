@@ -9,6 +9,7 @@ public class Enemy1 : Entity
 
     public E1_MoveState MoveState { get; private set; }
     public E1_IdleState idleState { get; private set; }
+    public E1_PlayerDetected PlayerDetectedState { get; private set; }
 
     override public void Start()
     {
@@ -18,9 +19,10 @@ public class Enemy1 : Entity
 
         MoveState = new E1_MoveState(this, stateMachine, "move", enemyData, this);
         idleState = new E1_IdleState(this, stateMachine, "idle", enemyData, this);
+        PlayerDetectedState = new E1_PlayerDetected(this, stateMachine, "playerDetected", enemyData, this);
 
         stateMachine.Initilize(MoveState);
 
-        
+
     }
 }

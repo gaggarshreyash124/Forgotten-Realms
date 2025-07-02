@@ -23,6 +23,11 @@ MonoBehaviour:
   ledgeCheckDistance: 0.4
   MinIdleTime: 1
   MaxIdleTime: 2
+  minAgroDistance: 3
+  maxAgroDistance: 4
   Ground:
     serializedVersion: 2
     m_Bits: 64
+  Player:
+    serializedVersion: 2
+    m_Bits: 8

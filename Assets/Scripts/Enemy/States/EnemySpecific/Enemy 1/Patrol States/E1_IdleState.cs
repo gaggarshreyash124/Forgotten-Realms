@@ -14,7 +14,7 @@ public class E1_IdleState : IdleState
     public override void Enter()
     {
         base.Enter();
-        Debug.Log(enemyData.speed);
+        
     }
 
     public override void Exit()
@@ -26,7 +26,11 @@ public class E1_IdleState : IdleState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (isidleover)
+        if (isPlayerInMinAgroRange)
+        {
+            enemy.stateMachine.ChangeState(enemy.PlayerDetectedState);
+        }
+        else if (isidleover)
         {
             StateMachine.ChangeState(enemy.MoveState);
         }
