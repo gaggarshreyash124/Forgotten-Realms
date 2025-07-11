@@ -20,9 +20,7 @@ public class MoveState : State
     {
         base.Enter();
         entity.SetVelocity(enemyData.speed);
-        isWallthere = entity.CheckWall();
-        isLedgethere = entity.CheckLedge();
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+
     }
 
     public override void Exit()
@@ -42,11 +40,16 @@ public class MoveState : State
     {
         base.PhysicsUpdate();
 
+        
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
+        
+        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isWallthere = entity.CheckWall();
         isLedgethere = entity.CheckLedge();
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        
-        Debug.Log(isLedgethere);
-        Debug.Log(isWallthere);
+
     }
 }

@@ -11,6 +11,7 @@ public class CollectablesData : ScriptableObject, Icollectable
     [PreviewField(height: 100, Alignment = ObjectFieldAlignment.Left)]
     [HideLabel]
     [Space(10)]
+    
     public Sprite icon;
 
     [HorizontalGroup("Information/Split", Width = 0.65f)]
@@ -23,7 +24,6 @@ public class CollectablesData : ScriptableObject, Icollectable
     [Header("Description")]
     [HideLabel]
     [Multiline]
-
     public string description;
 
     public void collect()

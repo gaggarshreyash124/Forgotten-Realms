@@ -25,11 +25,12 @@ public class E1_PlayerDetected : PlayerDetected
     {
         base.LogicUpdate();
 
-        if (!isPlayerInMaxAgroRange)
+        if (performLongRangeAction)
         {
-            enemy.idleState.SetFlipAfterIdle(false);
-            enemy.stateMachine.ChangeState(enemy.idleState);
+            enemy.stateMachine.ChangeState(enemy.ChargeState);
         }
+        
+        
 
     }
     public override void PhysicsUpdate()

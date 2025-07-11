@@ -71,8 +71,6 @@
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
     },
-
-    // Optional performance tweaks
-    "omnisharp.enableImportCompletion": true,
-    "csharp.format.enable": true
+    "csharp.format.enable": true,
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true
 }

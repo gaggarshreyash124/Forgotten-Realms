@@ -62,8 +62,12 @@ public class EnemyData : ScriptableObject
     [Header("Player Detection")]
     public float minAgroDistance = 3f;
     public float maxAgroDistance = 4f;
+    public float LongRangeActionTime = 1.5f;
 
-
+    [TitleGroup("Specific States")]
+    [Header("Charge State")]
+    public float chargeSpeed = 6f;
+    public float chargeTime = 2f;
 
     [ReadOnly]
     public LayerMask Ground;

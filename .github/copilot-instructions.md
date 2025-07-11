@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Player, Water, UI, Ground, Enemy, Boss
 - Active game object:
-  - Name: WallCheck
+  - Name: Enemy
   - Tag: Untagged
   - Layer: Enemy
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

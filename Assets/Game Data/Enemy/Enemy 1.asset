@@ -25,6 +25,9 @@ MonoBehaviour:
   MaxIdleTime: 2
   minAgroDistance: 3
   maxAgroDistance: 4
+  LongRangeActionTime: 0.6
+  chargeSpeed: 6
+  chargeTime: 0.6
   Ground:
     serializedVersion: 2
     m_Bits: 64

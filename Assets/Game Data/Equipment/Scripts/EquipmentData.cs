@@ -4,7 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 
 [CreateAssetMenu(fileName = "EquipmentData", menuName = "Data/Equipment Data")]
-public class EquipmentData : ScriptableObject
+public class EquipmentData : SerializedScriptableObject
 {
     [TitleGroup("Information")]
     [HorizontalGroup("Information/Split/Left", Width = 0.3f)]
