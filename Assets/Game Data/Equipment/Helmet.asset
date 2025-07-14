@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6002fb07e11764d90ddf9b11995381, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   icon: {fileID: 0}
   name: 
   description: 
   Rarity: Rare
   Type: Helmet
-  stats:
-  - 0
+  stats: []

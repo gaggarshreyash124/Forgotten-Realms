@@ -5,7 +5,7 @@ namespace Sirenix.OdinInspector.Demos.RPGEditor
     public enum ItemTypes
     {
         None,
-        MainHand,
+        MainHand,   
         OffHand,
         Body,
         Head,
