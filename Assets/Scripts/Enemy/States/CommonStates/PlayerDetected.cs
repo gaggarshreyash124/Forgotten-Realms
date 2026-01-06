@@ -22,14 +22,11 @@ public class PlayerDetected : State
         performLongRangeAction = false;
         entity.SetVelocity(0);
 
-
     }
     public override void Exit()
     {
         base.Exit();
-
     }
-
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -38,12 +35,11 @@ public class PlayerDetected : State
             performLongRangeAction = true;
         }
         
-        
     }
 
     public override void PhysicsUpdate()
     {
-        base.PhysicsUpdate();
+       base.PhysicsUpdate();
 
     }
     public override void DoChecks()

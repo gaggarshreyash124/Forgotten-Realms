@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveState : State
 {
-
     protected bool isWallthere;
     protected bool isLedgethere;
     protected bool isPlayerInMinAgroRange;

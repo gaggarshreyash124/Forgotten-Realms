@@ -33,7 +33,6 @@ public class IdleState : State
             isidleover = true;
         }
     }
-
     override public void PhysicsUpdate()
     {
         base.PhysicsUpdate();
